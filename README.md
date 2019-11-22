@@ -38,3 +38,5 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 
 
 ![Image](https://user-images.githubusercontent.com/58059663/69396314-2e4d7280-0d25-11ea-98b3-7850bfc02a46.png)
+
+![Image](https://user-images.githubusercontent.com/58059663/69397966-8c7d5400-0d2b-11ea-8b31-f2dae215c246.png)
