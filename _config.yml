@@ -1,1 +1,2 @@
-theme: jekyll-theme-slate
+url                      : "https://funnydogcat.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "/alpha" # the subpath of your site, e.g. "/blog"
