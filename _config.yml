@@ -1,3 +1,3 @@
 remote_theme             : mmistakes/minimal-mistakes
 url                      : "https://funnydogcat.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/alpha" # the subpath of your site, e.g. "/blog"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
