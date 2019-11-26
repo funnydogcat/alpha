@@ -4,6 +4,11 @@
   <div class="wrapper">
 
     <div class="footer-col-wrapper">
+
+      <div class="footer-col one-half">
+        <p>{{- site.description -}}</p>
+      </div>
+      
       <div class="footer-col one-half">
       <!--h2 class="footer-heading">{{ site.title | escape }}</h2-->
         <ul class="contact-list">
@@ -14,10 +19,6 @@
             <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
             {%- endif -%}
         </ul>
-      </div>
-
-      <div class="footer-col one-half">
-        <p>{{- site.description -}}</p>
       </div>
 
       <div class="social-links">
