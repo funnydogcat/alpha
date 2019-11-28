@@ -8,6 +8,8 @@ description: Funny gif archive for dog and cat. <br />Please vote for the best t
 #   Google search results) and in your feed.xml site description.
 # show_excerpts: false # set to true to show excerpts on the homepage
 
+image_url1: https://user-images.githubusercontent.com/58059663/69397966-8c7d5400-0d2b-11ea-8b31-f2dae215c246.png
+
 # Minima date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
 minima:
