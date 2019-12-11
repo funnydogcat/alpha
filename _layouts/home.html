@@ -10,7 +10,7 @@ layout: default
 
   {%- if site.categories.size > 0 -%}
     {% for category in site.categories %}
-      <div {% if forloop.first %}style="float:left;width:calc(50% - 8px);padding-right:16px;"{% else %}style="float:left;width:calc(50% - 8px);"{% endif %}>
+      <div class="footer-col one-half" {% if forloop.first %}style="padding-right:16px;"{% else %}style=""{% endif %}>
         <table>
           <tr><th>{{ category[0] }}</th></tr>
           <tr>
