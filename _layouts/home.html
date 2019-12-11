@@ -22,19 +22,13 @@ layout: default
   </div>
 
   {%- if site.categories.size > 0 -%}
-    <table>
-      <tr>
-        {% for category in site.categories %}
-          <th>{{ category[0] }}</th>
-        {% endfor %}
-      </tr>
-      <tr>
-        {% for category in site.categories %}
-          <td>
-            <ul>
-              <!-- 최근20개만 가져오는 방법이 필요함 -->
-              {% for post in category[1] %}
-              <li>
+    {% for category in site.categories %}
+      <div class="footer-col one-half">
+        <table>
+          <tr><th>{{ category[0] }}</th></tr>
+          {% for post in category[1] %}
+            <tr>
+              <td>
                 <!-- 날짜 표시를 깔끔하게 할 필요가 있음 -->
                 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
                 <span class="post-meta">{{ post.date | date: date_format }}</span>
@@ -47,13 +41,12 @@ layout: default
                 {%- if site.show_excerpts -%}
                   {{ post.excerpt }}
                 {%- endif -%}
-              </li>
-              {% endfor %}
-            </ul>
-          </td>
-        {% endfor %}
-      </tr>
-    </table>
+              </td>
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
+    {% endfor %}
   {%- endif -%}
 
   <!-- <h2 class="post-list-heading">Top 50 Comments</h2>
