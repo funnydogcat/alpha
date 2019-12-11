@@ -14,24 +14,28 @@ layout: default
         <div class="footer-col one-half">
           <table>
             <tr><th>{{ category[0] }}</th></tr>
-            {% for post in category[1] %}
-              <tr>
-                <td>
-                  <!-- 날짜 표시를 깔끔하게 할 필요가 있음 -->
-                  {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-                  <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <tr>
+              <td>
+                <ul>
+                  {% for post in category[1] %}
+                    <li>
+                      <!-- 날짜 표시를 깔끔하게 할 필요가 있음 -->
+                      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                      <span class="post-meta">{{ post.date | date: date_format }}</span>
 
-                  <!-- 날짜와 타이틀을 깔끔하게 구분하는 디자인 필요 -->
-                  <!-- 긴 타이틀의 경우 잘라서 보여주는 기능이 필요 -->
-                  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                      <!-- 날짜와 타이틀을 깔끔하게 구분하는 디자인 필요 -->
+                      <!-- 긴 타이틀의 경우 잘라서 보여주는 기능이 필요 -->
+                      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
 
-                  <!-- 내용을 살짝 보여주는 기능이 필요할까? -->
-                  {%- if site.show_excerpts -%}
-                    {{ post.excerpt }}
-                  {%- endif -%}
-                </td>
-              </tr>
-            {% endfor %}
+                      <!-- 내용을 살짝 보여주는 기능이 필요할까? -->
+                      {%- if site.show_excerpts -%}
+                        {{ post.excerpt }}
+                      {%- endif -%}
+                    </li>
+                  {% endfor %}
+                </ul>
+              </td>
+            </tr>
           </table>
         </div>
       {% endfor %}
