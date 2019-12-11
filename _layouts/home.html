@@ -10,23 +10,22 @@ layout: default
   {{ content }}
 
   <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }} - 20set?</h2>
-  {%- if site.posts.cats.size > 0 -%}
-    <ul class="post-list">
-      {%- for post in site.posts.cats -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
+  {%- if site.categories.size > 0 -%}
+    {% for category in site.categories %}
+      <h3>{{ category[0] }}</h3>
+      <ul>
+        {% for post in category[1] %}
+          <li>
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            {%- if site.show_excerpts -%}
+              {{ post.excerpt }}
+            {%- endif -%}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
   {%- endif -%}
 
   <h2 class="post-list-heading">Top Comments - 20set?</h2>
