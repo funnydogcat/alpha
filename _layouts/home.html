@@ -9,26 +9,36 @@ layout: default
 
   {{ content }}
 
-  <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }} - 20set?</h2>
+  <h2 class="post-list-heading">{{ page.list_title | default: "items" }}</h2>
   {%- if site.categories.size > 0 -%}
-    {% for category in site.categories %}
-      <h3>{{ category[0] }}</h3>
-      <ul>
-        {% for post in category[1] %}
-          <li>
-            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-            <span class="post-meta">{{ post.date | date: date_format }}</span>
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-            {%- if site.show_excerpts -%}
-              {{ post.excerpt }}
-            {%- endif -%}
-          </li>
+    <table>
+      <tr>
+        {% for category in site.categories %}
+          <th>{{ category[0] }}</th>
         {% endfor %}
-      </ul>
-    {% endfor %}
+      </tr>
+      <tr>
+        {% for category in site.categories %}
+          <td>
+            <ul>
+              {% for post in category[1] %}
+              <li>
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                <span class="post-meta">{{ post.date | date: date_format }}</span>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                {%- if site.show_excerpts -%}
+                  {{ post.excerpt }}
+                {%- endif -%}
+              </li>
+              {% endfor %}
+            </ul>
+          </td>
+        {% endfor %}
+      </tr>
+    </table>
   {%- endif -%}
 
-  <h2 class="post-list-heading">Top Comments - 20set?</h2>
+  <!-- <h2 class="post-list-heading">Top Comments - 20set?</h2>
   {%- if site.posts.size > 0 -%}
     <ul>
       {%- for post in site.posts -%}
@@ -52,7 +62,7 @@ layout: default
       <svg class="svg-icon orange"><use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg><span>Subscribe</span>
     </a>
   </p>
-  {%- endif -%}
+  {%- endif -%} -->
 
 
 </div>
