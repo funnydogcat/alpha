@@ -7,14 +7,12 @@
 }
 
 @media screen and (min-width: $on-medium) {
-  .one-half-left {
-    padding-right:20px;
-  }
-
   .one-half-col {
-    float: left;
-    width: -webkit-calc(50% - 10px);
-    width:         calc(50% - 10px);
+    flex-direction:row;
+    display:grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 15px;
+    grid-auto-rows: minmax(100px, auto);
   }
 }
 

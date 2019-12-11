@@ -10,7 +10,7 @@ layout: default
 
   {%- if site.categories.size > 0 -%}
     {% for category in site.categories %}
-      <div {% if forloop.first %}class="one-half-col one-half-left"{% else %}class="one-half-col"{% endif %}>
+      <div {% if forloop.first %}class="one-half-col"{% else %}class="one-half-col"{% endif %}>
         <table>
           <tr><th>{{ category[0] }}</th></tr>
           <tr>
