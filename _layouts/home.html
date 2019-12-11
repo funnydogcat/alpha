@@ -10,13 +10,13 @@ layout: default
 
   {%- if site.categories.size > 0 -%}
     {% for category in site.categories %}
-      <div class="footer-col one-half">
+      <div class="footer-col one-half" {% if forloop.first %}style="padding-left:0;"{% endif %}>
         <table>
           <tr><th>{{ category[0] }}</th></tr>
           <tr>
             <td>
               <ul>
-                {% for post in category[1] %}
+                {% for post in category[1] limit:2 %}
                   <li>
                     <!-- 날짜 표시를 깔끔하게 할 필요가 있음 -->
                     {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
