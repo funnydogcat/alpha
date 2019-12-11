@@ -10,13 +10,14 @@ layout: default
 
   {%- if site.categories.size > 0 -%}
     {% for category in site.categories %}
-      <div {% if forloop.first %}class="one-half-col one-half-col-left"{% else %}class="one-half-col"{% endif %}>
+      <div {% if forloop.first %}class="one-half-col one-half-left"{% else %}class="one-half-col"{% endif %}>
         <table>
           <tr><th>{{ category[0] }}</th></tr>
           <tr>
             <td>
               <ul>
-                {% for post in category[1] limit:2 %}
+                <!-- 최근순으로 소트해야함 -->
+                {% for post in category[1] limit:20 %}
                   <li>
                     <!-- 날짜 표시를 깔끔하게 할 필요가 있음 -->
                     {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
