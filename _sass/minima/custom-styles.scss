@@ -2,7 +2,15 @@
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
 
 
+.one-half-col {
+  width: 100%;
+}
+
 @media screen and (min-width: $on-medium) {
+  .one-half-col-left {
+    padding-right:20px;
+  }
+
   .one-half-col {
     float: left;
     width: -webkit-calc(50% - 10px);
