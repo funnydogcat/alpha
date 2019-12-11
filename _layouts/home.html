@@ -9,7 +9,18 @@ layout: default
 
   {{ content }}
 
-  <h2 class="post-list-heading">{{ page.list_title | default: "items" }}</h2>
+  <h2 class="post-list-heading">Recent Funnies</h2>
+
+
+  <div class="wrapper">
+    <div class="footer-col one-half">
+      <p>ㅁㅁㅁㅁㅁㅁㅁ</p>
+    </div>
+    <div class="footer-col one-half">
+      <p>ㅁㅁㅁㅁㅁ222222ㅁㅁ</p>
+    </div>
+  </div>
+
   {%- if site.categories.size > 0 -%}
     <table>
       <tr>
@@ -21,11 +32,18 @@ layout: default
         {% for category in site.categories %}
           <td>
             <ul>
+              <!-- 최근20개만 가져오는 방법이 필요함 -->
               {% for post in category[1] %}
               <li>
+                <!-- 날짜 표시를 깔끔하게 할 필요가 있음 -->
                 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
                 <span class="post-meta">{{ post.date | date: date_format }}</span>
+
+                <!-- 날짜와 타이틀을 깔끔하게 구분하는 디자인 필요 -->
+                <!-- 긴 타이틀의 경우 잘라서 보여주는 기능이 필요 -->
                 <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+
+                <!-- 내용을 살짝 보여주는 기능이 필요할까? -->
                 {%- if site.show_excerpts -%}
                   {{ post.excerpt }}
                 {%- endif -%}
