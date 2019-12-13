@@ -24,8 +24,7 @@ layout: default
                       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
                       <span class="post-meta">{{ post.date | date: date_format }}</span>
 
-                      <!-- 날짜와 타이틀을 깔끔하게 구분하는 디자인 필요 -->
-                      <!-- 긴 타이틀의 경우 잘라서 보여주는 기능이 필요 -->
+                      <!-- 코멘트 갯수를 표시해야 함. -->
                       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
 
                       <!-- 내용을 살짝 보여주는 기능이 필요할까? -->
