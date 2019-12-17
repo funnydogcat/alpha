@@ -56,3 +56,5 @@ plugins:
 
 
 comments: true
+
+JEKYLL_ENV: production
