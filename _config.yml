@@ -57,7 +57,7 @@ plugins:
 
 comments: true
 JEKYLL_ENV: production
-google_analytics: true
+google_analytics: false
 
 # Paginate config
 pagination:
