@@ -1,6 +1,7 @@
 ---
 layout: catsup
 title: funcat
+permalink: /202101/
 ---
 
 
