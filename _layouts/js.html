@@ -1,6 +1,1 @@
-{{ page.title }}
-
-<script>
-</script>
-
-{{ content }}
+{{ content | remove: '<p>' | remove: '</p>' }}
