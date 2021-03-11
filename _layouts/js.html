@@ -1,13 +1,1 @@
 {{ content | remove: "<p>" | remove: "</p>" }}
-
-33333
-{% for dino in site.data.dinos %}
-  <h2>{{dino.name}}</h2>
-  <dl>
-    <dt>Diet</dt>
-    <dd>{{dino.diet}}</dd>
-    <dt>Size</dt>
-    <dd>{{dino.size}}</dd>
-  </dl>
-{% endfor %}
-44444
