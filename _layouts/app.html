@@ -1,0 +1,1 @@
+{% for dino in site.data.2021_1 %}{% assign sid = dino.id | prepend:'/' %}{% if page.permalink == sid %}<img src="{{dino.url}}" />{% endif %}{% endfor %}
