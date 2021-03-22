@@ -1,1 +1,9 @@
+<script>
+var arr2021_1 = [
+{% for arrItem in site.data.2021_1 %}
+{ time: {{arrItem.time}}, id: {{arrItem.id}}, url: {{arrItem.url}} },
+{% endfor %}
+];
+</script>
+
 {{ content | remove: "<p>" | remove: "</p>" }}
