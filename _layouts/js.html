@@ -6,10 +6,10 @@
   <title>Health Check</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <style id="jsbin-css">
-    .mainContainer { background-color:#f0f0f0; }
+    #mainContainer { background-color:#f0f0f0;height:200px; }
     .healthContainer { font-size:8px; }
-    .healthContainer > div { display:inline-block; }
-    .healthIcon { font-size:8px;padding:1px; }
+    .healthContainer > div { display:inline-block }
+    .healthIcon { font-size:8px;padding:1px;cursor:pointer; }
     .defaultH { color:grey; }
     .goodH { color:green; }
     .bedH { color:red; }
@@ -92,7 +92,11 @@ function checkMonth(arrUrl) {
 
 // --- Unit Functions
 function getTile(item) {
-  return '<a class="healthIcon defaultH" title="'+item.dt+'" id="'+item.id+'" href="'+item.url+'" target="_blank">&block;</a>';
+  if($.isEmptyObject(item.url)) {
+    return '<span class="healthIcon defaultH" title="'+item.dt+'" id="'+item.id+'">&block;</span>';
+  } else {
+    return '<a class="healthIcon defaultH" title="'+item.dt+'" id="'+item.id+'" href="'+item.url+'" target="_blank">&block;</a>';
+  }
 }
 
 function check(url, callb) {
