@@ -101,7 +101,8 @@ function getTile(item) {
 
 function check(url, callb) {
   $.support.cors = true;
-  $.ajax({ crossDomain:true, type:'HEAD', url:url, success:function(){callb(true);}, error:function(){callb(false);}});
+  $.ajax({ crossDomain:true, type:'HEAD', url:url, success:function(){callb(true);}, error:function(request,status,error){
+    alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);callb(false);}});
 }
 </script>
 
