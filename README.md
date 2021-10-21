@@ -2,6 +2,8 @@
 
 https://funnydogcat.github.io/alpha/
 
+https://funnydogcat.github.io/alpha/catsup-check/
+
 #### TODO
 1. 앱에서 사용하기위한 redirect 처리기법 개발
 
