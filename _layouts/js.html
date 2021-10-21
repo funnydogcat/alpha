@@ -93,9 +93,9 @@ function checkMonth(arrUrl) {
 // --- Unit Functions
 function getTile(item) {
   if($.isEmptyObject(item.url)) {
-    return '<span class="healthIcon defaultH" title="'+item.dt+'" id="'+item.id+'">&block;</span>';
+    return '<span class="healthIcon defaultH" title="'+item.time+'" id="'+item.id+'">&block;</span>';
   } else {
-    return '<a class="healthIcon defaultH" title="'+item.dt+'" id="'+item.id+'" href="'+item.url+'" target="_blank">&block;</a>';
+    return '<a class="healthIcon defaultH" title="'+item.time+'" id="'+item.id+'" href="'+item.url+'" target="_blank">&block;</a>';
   }
 }
 
