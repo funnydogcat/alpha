@@ -6,6 +6,7 @@ https://funnydogcat.github.io/alpha/catsup-check/
 
 #### TODO
 1. 앱에서 사용하기위한 redirect 처리기법 개발
+1. 폴더링 처리하기. 년도별. (파일이 많아지는 것을 막기위함)
 
 #### Limbo (다음 내용은 계획에서 빠진다)
 1. 포스트 하단에 다음, 이전 포스트 이동 버튼 넣기.
